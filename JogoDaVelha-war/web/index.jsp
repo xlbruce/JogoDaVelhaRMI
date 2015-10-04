@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Jogo da Velha</title>
+        <title>Jogo da Velha (RMI)</title>
         <link rel="stylesheet" href="css/style.css"/>
     </head>
     <body>
