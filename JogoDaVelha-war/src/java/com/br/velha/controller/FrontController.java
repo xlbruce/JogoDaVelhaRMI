@@ -1,7 +1,7 @@
 package com.br.velha.controller;
 
 import com.br.velha.model.EstadoDoJogo;
-import com.br.velha.sessionbeans.JogoControllerSBLocal;
+import com.br.velha.sessionbeans.JogoManagerSBLocal;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.rmi.RemoteException;
@@ -10,14 +10,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+    
 /**
  *
  * @author bruce
  */
 public class FrontController extends HttpServlet {
-    @EJB
-    private JogoControllerSBLocal jogo;
+    @EJB(name = "jogo")
+    private JogoManagerSBLocal jogo;
+    
     
     //Usado para verificar se o jogo já começou
     private boolean init = false;

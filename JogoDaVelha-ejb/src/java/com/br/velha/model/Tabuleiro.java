@@ -1,10 +1,12 @@
 package com.br.velha.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author bruce
  */
-public class Tabuleiro {
+public class Tabuleiro implements Serializable {
 
     private int[][] matriz;
     private static final int LIVRE = 0;

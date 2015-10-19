@@ -1,24 +1,20 @@
-package com.br.velha.sessionbeans;
+package com.br.velha.service;
 
 import com.br.velha.model.EstadoDoJogo;
 import com.br.velha.model.Tabuleiro;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import javax.ejb.Local;
 
 /**
  *
  * @author bruce
  */
-@Local
-public interface JogoControllerSBLocal {
+public interface JogoControllerLocal extends Remote {
 
     EstadoDoJogo joga(int x, int y) throws RemoteException ;
 
     Tabuleiro getTabuleiro() throws RemoteException;
 
-    EstadoDoJogo getEstado();
-
-    void novoJogo();
+    void novoJogo() throws RemoteException;
     
 }
